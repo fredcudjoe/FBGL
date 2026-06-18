@@ -1,0 +1,43 @@
+{
+  "id": "./",
+  "name": "Fidelity Bank Ghana — Kukua",
+  "short_name": "Fidelity",
+  "description": "Fidelity Bank Ghana mobile banking with Kukua, your AI banking assistant — voice and chat banking, transfers, airtime, rewards and the 20 Years, 20 Schools Orange Impact.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#0D0D0D",
+  "theme_color": "#F68529",
+  "lang": "en-GH",
+  "dir": "ltr",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "./screenshots/home.png", "sizes": "412x915", "type": "image/png", "form_factor": "narrow", "label": "Home dashboard" },
+    { "src": "./screenshots/kukua.png", "sizes": "412x915", "type": "image/png", "form_factor": "narrow", "label": "Ask Kukua — AI voice & chat banking" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ask Kukua",
+      "short_name": "Kukua",
+      "description": "Open the AI banking assistant",
+      "url": "./index.html?screen=voice",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Orange Impact",
+      "short_name": "Impact",
+      "description": "20 Years, 20 Schools giving",
+      "url": "./index.html?screen=impact",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
+  "prefer_related_applications": false
+}
