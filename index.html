@@ -2168,6 +2168,122 @@ body{
 .imp-toast svg{ width:22px; height:22px; color:var(--success); flex-shrink:0; }
 .imp-toast-txt{ font-size:13px; color:var(--text); font-weight:600; line-height:1.4; }
 
+
+/* ═══════════════════════════════════════════════════════
+   KUKUA FRAUD BOT — Fraud Support
+   ═══════════════════════════════════════════════════════ */
+#fraud{ background:radial-gradient(600px 360px at 50% -10%, rgba(246,133,41,.13), transparent 60%), var(--dark); }
+.fr-head{ display:flex; align-items:center; gap:13px; padding:16px 20px 6px; }
+.fr-head .back{ flex-shrink:0; }
+.fr-title{ font-family:'Inter'; font-weight:800; font-size:19px; color:var(--text); }
+.fr-title b{ color:var(--brand); }
+.fr-sub{ font-size:11px; color:var(--muted); margin-top:1px; }
+.fr-body{ padding:8px 18px 26px; }
+
+/* hero */
+.fr-hero{ border-radius:20px; padding:20px; margin-top:8px; position:relative; overflow:hidden; color:#fff;
+  background:linear-gradient(135deg,#FF7A1A,#F68529 48%,#C75E16);
+  box-shadow:0 20px 44px rgba(246,133,41,.30), inset 0 1px 0 rgba(255,255,255,.25); }
+.fr-hero::after{ content:''; position:absolute; top:-45%; right:-12%; width:170px; height:170px; border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,.20), transparent 70%); }
+.fr-hero-row{ display:flex; align-items:center; gap:13px; }
+.fr-hero-badge{ width:50px; height:50px; border-radius:14px; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.4);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.fr-hero-badge svg{ width:27px; height:27px; }
+.fr-hero-t{ font-family:'Inter'; font-weight:800; font-size:20px; }
+.fr-hero-k{ font-size:11px; opacity:.92; margin-top:2px; }
+.fr-hero-p{ font-size:12.5px; opacity:.95; margin-top:13px; line-height:1.5; }
+
+/* feature tiles */
+.fr-lbl{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--sub); font-weight:700; margin:20px 2px 12px; }
+.fr-grid{ display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+.fr-tile{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:15px; cursor:pointer;
+  transition:transform .35s var(--ease-spring), background .2s, border-color .2s; }
+.fr-tile:active{ transform:scale(.96); background:var(--surface2); border-color:var(--brand-line); }
+.fr-tile-ic{ width:40px; height:40px; border-radius:11px; background:var(--brand-dim); display:flex; align-items:center; justify-content:center; }
+.fr-tile-ic svg{ width:21px; height:21px; color:var(--brand); }
+.fr-tile-t{ font-family:'Inter'; font-weight:700; font-size:14px; color:var(--text); margin-top:11px; }
+.fr-tile-d{ font-size:11px; color:var(--muted); margin-top:3px; line-height:1.4; }
+
+/* trend feed */
+.fr-feed-item{ display:flex; gap:12px; align-items:flex-start; background:var(--surface); border:1px solid var(--border);
+  border-radius:14px; padding:13px 14px; margin-bottom:10px; }
+.fr-feed-ic{ width:36px; height:36px; border-radius:10px; background:var(--brand-dim); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.fr-feed-ic svg{ width:19px; height:19px; color:var(--brand); }
+.fr-feed-txt{ flex:1; }
+.fr-feed-top{ display:flex; align-items:center; gap:8px; }
+.fr-feed-t{ font-family:'Inter'; font-weight:700; font-size:13px; color:var(--text); }
+.fr-tag{ font-size:9px; font-weight:800; letter-spacing:.06em; padding:2px 7px; border-radius:9px; }
+.fr-tag.new{ color:var(--brand); background:var(--brand-dim); border:1px solid var(--brand-line); }
+.fr-tag.rising{ color:#E0A100; background:rgba(224,161,0,.1); border:1px solid rgba(224,161,0,.3); }
+.fr-feed-d{ font-size:11.5px; color:var(--muted); margin-top:3px; line-height:1.45; }
+
+/* footer call card */
+.fr-foot{ display:flex; align-items:center; gap:13px; background:var(--surface); border:1px solid var(--brand-line);
+  border-radius:16px; padding:15px; margin-top:18px; }
+.fr-foot-ic{ width:42px; height:42px; border-radius:50%; background:var(--brand-dim); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.fr-foot-ic svg{ width:21px; height:21px; color:var(--brand); }
+.fr-foot-t{ font-family:'Inter'; font-weight:700; font-size:13.5px; color:var(--text); }
+.fr-foot-d{ font-size:11.5px; color:var(--muted); margin-top:2px; }
+.fr-foot-d b{ color:var(--brand); }
+.fr-credit{ text-align:center; font-size:10.5px; color:var(--sub); margin-top:16px; line-height:1.5; }
+.fr-credit b{ color:var(--muted); }
+
+/* ── sheets (report / quiz / awareness) ── */
+.fr-sheet-ov{ position:absolute; inset:0; z-index:1100; background:rgba(0,0,0,.62); backdrop-filter:blur(4px);
+  display:flex; align-items:flex-end; justify-content:center; opacity:0; pointer-events:none; transition:opacity .3s; }
+.fr-sheet-ov.show{ opacity:1; pointer-events:auto; }
+.fr-sheet{ width:100%; max-height:88%; background:var(--surface); border-radius:24px 24px 0 0; border-top:1px solid var(--border);
+  padding:8px 20px calc(22px + env(safe-area-inset-bottom)); overflow-y:auto; transform:translateY(100%); transition:transform .42s var(--ease-spring); }
+.fr-sheet-ov.show .fr-sheet{ transform:translateY(0); }
+.fr-grab{ width:40px; height:4px; border-radius:3px; background:var(--surface3); margin:8px auto 14px; }
+.fr-sheet-h{ font-family:'Inter'; font-weight:800; font-size:18px; color:var(--text); }
+.fr-sheet-sub{ font-size:12.5px; color:var(--muted); margin:4px 0 16px; line-height:1.5; }
+
+/* report form */
+.fr-field-lbl{ font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; margin:14px 0 8px; }
+.fr-types{ display:flex; flex-wrap:wrap; gap:8px; }
+.fr-type{ padding:9px 13px; border-radius:11px; background:var(--surface2); border:1px solid var(--border); cursor:pointer;
+  font-family:'Inter'; font-weight:600; font-size:12px; color:var(--text); transition:transform .3s var(--ease-spring), background .2s, border-color .2s; }
+.fr-type:active{ transform:scale(.94); }
+.fr-type.sel{ background:var(--brand-dim); border-color:var(--brand); color:var(--brand); }
+.fr-textarea{ width:100%; min-height:90px; background:var(--surface2); border:1px solid var(--border); border-radius:13px;
+  padding:13px; color:var(--text); font-family:'Inter'; font-size:13px; resize:none; outline:none; line-height:1.5; }
+.fr-textarea:focus{ border-color:var(--brand-line); }
+.fr-textarea::placeholder{ color:var(--sub); }
+.fr-submit{ width:100%; margin-top:18px; padding:16px; border:none; border-radius:14px; background:var(--brand); color:#fff;
+  font-family:'Inter'; font-weight:800; font-size:15px; cursor:pointer; box-shadow:0 12px 26px rgba(246,133,41,.3);
+  transition:transform .4s var(--ease-spring); display:flex; align-items:center; justify-content:center; gap:9px; }
+.fr-submit:active{ transform:scale(.97); }
+.fr-submit svg{ width:18px; height:18px; }
+
+/* quiz */
+.fr-q-scn{ background:var(--surface2); border:1px solid var(--border); border-radius:14px; padding:14px; font-size:13.5px;
+  color:var(--text); line-height:1.55; margin-bottom:14px; }
+.fr-q-opt{ width:100%; text-align:left; padding:14px; border-radius:13px; background:var(--surface2); border:1px solid var(--border);
+  color:var(--text); font-family:'Inter'; font-size:13px; font-weight:600; cursor:pointer; margin-bottom:10px;
+  transition:transform .25s var(--ease-spring), background .2s, border-color .2s; }
+.fr-q-opt:active{ transform:scale(.98); }
+.fr-q-opt.correct{ background:rgba(46,204,113,.12); border-color:var(--success); color:var(--success); }
+.fr-q-opt.wrong{ background:var(--brand-dim); border-color:var(--brand); color:var(--brand); }
+.fr-q-fb{ font-size:12.5px; color:var(--muted); line-height:1.5; margin:4px 2px 0; max-height:0; overflow:hidden; opacity:0; transition:max-height .4s, opacity .3s; }
+.fr-q-fb.show{ max-height:160px; opacity:1; margin-top:10px; }
+.fr-q-fb b{ color:var(--text); }
+.fr-q-next{ width:100%; margin-top:16px; padding:14px; border:none; border-radius:13px; background:var(--brand); color:#fff;
+  font-family:'Inter'; font-weight:800; font-size:14px; cursor:pointer; transition:transform .4s var(--ease-spring); }
+.fr-q-next:active{ transform:scale(.97); }
+.fr-q-prog{ font-size:11px; color:var(--sub); font-weight:700; letter-spacing:.06em; margin-bottom:10px; }
+
+/* awareness cards */
+.fr-aw{ display:flex; gap:12px; align-items:flex-start; padding:13px 0; border-bottom:1px solid var(--border); }
+.fr-aw:last-child{ border-bottom:none; }
+.fr-aw-ic{ width:38px; height:38px; border-radius:11px; background:var(--brand-dim); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.fr-aw-ic svg{ width:20px; height:20px; color:var(--brand); }
+.fr-aw-t{ font-family:'Inter'; font-weight:700; font-size:13.5px; color:var(--text); }
+.fr-aw-d{ font-size:12px; color:var(--muted); margin-top:2px; line-height:1.45; }
+
+/* entry chip used inside Kukua chat hint area is reused (.chat-hint-chip) */
+
 </style></head><body>
 <div class="phone">
 
@@ -2229,7 +2345,7 @@ body{
 
       <div class="rg2-tabs">
         <div class="rg2-tab active" id="rgTab0" onclick="selectOpt(0)">Individual</div>
-        <div class="rg2-tab" id="rgTab1" onclick="selectOpt(1)">Sole Proprietorship</div>
+        <div class="rg2-tab" id="rgTab1" onclick="selectOpt(1)">Business Account</div>
       </div>
 
       <div class="rg2-field">
@@ -2411,6 +2527,115 @@ body{
       <p>Your gift goes to the Orange Impact school-building fund. Confirm with Face ID or your PIN to continue.</p>
       <button onclick="impConfirmDonate()">Donate now</button>
       <button onclick="impCancelDonate()" style="background:transparent;color:var(--muted);box-shadow:none;margin-top:8px;">Cancel</button>
+    </div>
+  </div>
+
+  
+  <!-- ═══ KUKUA FRAUD BOT — FRAUD SUPPORT ═══ -->
+  <div class="screen" id="fraud">
+    <div class="statusbar"><span class="time">9:49</span><div class="ic"><svg width="17" height="12" viewBox="0 0 17 12" fill="none"><rect x="0" y="5" width="3" height="7" rx="1" fill="#F2F2F2" opacity=".4"/><rect x="4.5" y="3" width="3" height="9" rx="1" fill="#F2F2F2" opacity=".6"/><rect x="9" y="1" width="3" height="11" rx="1" fill="#F2F2F2" opacity=".8"/><rect x="13.5" y="0" width="3" height="12" rx="1" fill="#F2F2F2"/></svg></div></div>
+
+    <div class="fr-head">
+      <div class="back" onclick="fraudBack()"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div>
+        <div class="fr-title">Fraud <b>Support</b></div>
+        <div class="fr-sub">Powered by Financial Crime Management</div>
+      </div>
+    </div>
+
+    <div class="fr-body">
+      <div class="fr-hero">
+        <div class="fr-hero-row">
+          <div class="fr-hero-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l7 2.6v5.4c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V5.1l7-2.6z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.6 12.2l2.3 2.3 4.5-4.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><div class="fr-hero-t">Fraud Bot</div><div class="fr-hero-k">via Kukua · Financial Crime Management</div></div>
+        </div>
+        <div class="fr-hero-p">Log fraud enquiries and complaints in seconds — supporting timely reporting, early detection and proactive fraud prevention.</div>
+      </div>
+
+      <div class="fr-lbl">What you can do</div>
+      <div class="fr-grid">
+        <div class="fr-tile" onclick="openFraudReport()">
+          <div class="fr-tile-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-3.5L5 21V3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 7v5M12 14.5v.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <div class="fr-tile-t">Incident Reporting</div>
+          <div class="fr-tile-d">Report a fraud case directly to the experts.</div>
+        </div>
+        <div class="fr-tile" onclick="openFraudQuiz()">
+          <div class="fr-tile-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div class="fr-tile-t">Flash Scenarios</div>
+          <div class="fr-tile-d">Interactive fraud awareness &amp; decisions.</div>
+        </div>
+        <div class="fr-tile" onclick="scrollFraudFeed()">
+          <div class="fr-tile-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V9M9 18V5M14 18v-6M19 18V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <div class="fr-tile-t">Fraud Trend Feed</div>
+          <div class="fr-tile-d">Updates on emerging fraud trends.</div>
+        </div>
+        <div class="fr-tile" onclick="openFraudAware()">
+          <div class="fr-tile-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l7 2.6v5.4c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V5.1l7-2.6z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div class="fr-tile-t">Staff Awareness</div>
+          <div class="fr-tile-d">Fraud types, red flags &amp; prevention.</div>
+        </div>
+      </div>
+
+      <div class="fr-lbl" id="fraudFeedLbl">Fraud Trend Feed</div>
+      <div class="fr-feed-item"><div class="fr-feed-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2.5" width="14" height="19" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 18.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="fr-feed-txt"><div class="fr-feed-top"><span class="fr-feed-t">Mobile-money &ldquo;wrong send&rdquo; scam</span><span class="fr-tag rising">RISING</span></div><div class="fr-feed-d">Callers claim they sent money by mistake and pressure customers to &ldquo;return&rdquo; it. Verify with the network before acting.</div></div></div>
+      <div class="fr-feed-item"><div class="fr-feed-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 9h16" stroke="currentColor" stroke-width="1.6"/></svg></div><div class="fr-feed-txt"><div class="fr-feed-top"><span class="fr-feed-t">Phishing SMS posing as Fidelity</span><span class="fr-tag new">NEW</span></div><div class="fr-feed-d">Texts with fake links asking for PIN/OTP. Fidelity never asks for your PIN or OTP — report and delete.</div></div></div>
+      <div class="fr-feed-item"><div class="fr-feed-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 20a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="fr-feed-txt"><div class="fr-feed-top"><span class="fr-feed-t">Impersonation of bank staff</span><span class="fr-tag new">NEW</span></div><div class="fr-feed-d">Fraudsters pose as &ldquo;Fidelity officers&rdquo; to extract credentials. Staff will never ask for a customer&rsquo;s full PIN or password.</div></div></div>
+
+      <div class="fr-foot">
+        <div class="fr-foot-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 005.5 5.5l1.5-2 4 1.5V20a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div><div class="fr-foot-t">Urgent fraud? Reach us 24/7</div><div class="fr-foot-d">Financial Crime Management · <b>0800 00 3355</b></div></div>
+      </div>
+      <div class="fr-credit">Powered by <b>Financial Crime Management</b> &amp; the <b>Transformation Team</b></div>
+    </div>
+
+    <div class="imp-toast" id="fraudToast"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="imp-toast-txt" id="fraudToastTxt">Reported.</div></div>
+  </div>
+
+  <!-- Incident report sheet -->
+  <div class="fr-sheet-ov" id="fraudReportOv">
+    <div class="fr-sheet">
+      <div class="fr-grab"></div>
+      <div class="fr-sheet-h">Report an incident</div>
+      <div class="fr-sheet-sub">This goes straight to the Financial Crime Management Team. Share what happened — every detail helps.</div>
+      <div class="fr-field-lbl">Type of fraud</div>
+      <div class="fr-types" id="fraudTypes">
+        <div class="fr-type" onclick="pickFraudType(this,'Phishing / smishing')">Phishing / smishing</div>
+        <div class="fr-type" onclick="pickFraudType(this,'Mobile-money scam')">Mobile-money scam</div>
+        <div class="fr-type" onclick="pickFraudType(this,'Card fraud')">Card fraud</div>
+        <div class="fr-type" onclick="pickFraudType(this,'Impersonation')">Impersonation</div>
+        <div class="fr-type" onclick="pickFraudType(this,'Identity theft')">Identity theft</div>
+        <div class="fr-type" onclick="pickFraudType(this,'Other')">Other</div>
+      </div>
+      <div class="fr-field-lbl">What happened?</div>
+      <textarea class="fr-textarea" id="fraudDesc" placeholder="Describe the incident — who, what, when, and any reference numbers…"></textarea>
+      <button class="fr-submit" onclick="submitFraud()"><svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Submit report</button>
+    </div>
+  </div>
+
+  <!-- Flash scenario quiz sheet -->
+  <div class="fr-sheet-ov" id="fraudQuizOv">
+    <div class="fr-sheet">
+      <div class="fr-grab"></div>
+      <div class="fr-q-prog" id="fraudQProg">SCENARIO 1 OF 2</div>
+      <div class="fr-sheet-h" id="fraudQTitle">Flash Scenario</div>
+      <div class="fr-q-scn" id="fraudQScn"></div>
+      <div id="fraudQOpts"></div>
+      <div class="fr-q-fb" id="fraudQFb"></div>
+      <button class="fr-q-next" id="fraudQNext" onclick="fraudQuizNext()" style="display:none">Next</button>
+    </div>
+  </div>
+
+  <!-- Staff awareness sheet -->
+  <div class="fr-sheet-ov" id="fraudAwareOv">
+    <div class="fr-sheet">
+      <div class="fr-grab"></div>
+      <div class="fr-sheet-h">Staff Awareness</div>
+      <div class="fr-sheet-sub">Know the common fraud types, the red flags, and how to keep customers safe.</div>
+      <div class="fr-aw"><div class="fr-aw-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 9h16" stroke="currentColor" stroke-width="1.6"/></svg></div><div><div class="fr-aw-t">Phishing &amp; smishing</div><div class="fr-aw-d">Fake emails/SMS with urgent links. Red flag: requests for PIN, OTP or password. Fidelity never asks for these.</div></div></div>
+      <div class="fr-aw"><div class="fr-aw-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2.5" width="14" height="19" rx="2.5" stroke="currentColor" stroke-width="1.6"/></svg></div><div><div class="fr-aw-t">Mobile-money scams</div><div class="fr-aw-d">&ldquo;Wrong send&rdquo; and prize tricks. Red flag: pressure to act fast or move money to &ldquo;reverse&rdquo; a transfer.</div></div></div>
+      <div class="fr-aw"><div class="fr-aw-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 20a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><div><div class="fr-aw-t">Impersonation</div><div class="fr-aw-d">Callers posing as bank/officials. Red flag: caller already &ldquo;knows&rdquo; some details and asks you to confirm the rest.</div></div></div>
+      <div class="fr-aw"><div class="fr-aw-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16" stroke="currentColor" stroke-width="1.6"/></svg></div><div><div class="fr-aw-t">Card fraud</div><div class="fr-aw-d">Skimming &amp; unfamiliar charges. Red flag: small &ldquo;test&rdquo; transactions before a big one — freeze and report early.</div></div></div>
+      <button class="fr-q-next" onclick="closeFraudSheet('fraudAwareOv')">Got it</button>
     </div>
   </div>
 
@@ -2649,6 +2874,7 @@ body{
       <div class="voice-chip" onclick="voiceRun('buy 10 cedis airtime')">Buy 10 airtime</div>
       <div class="voice-chip" onclick="voiceRun('show my transactions')">Recent transactions</div>
       <div class="voice-chip" onclick="voiceRun('how much did i spend')">How much did I spend</div>
+      <div class="voice-chip" onclick="kukuaFraud('voice')">Report fraud</div>
     </div>
     <div class="voice-note" id="voiceNote"></div>
   </div>
@@ -2695,6 +2921,7 @@ body{
           <div class="chat-hint-chip" onclick="chatChip('Buy 10 cedis airtime')">Buy 10 airtime</div>
           <div class="chat-hint-chip" onclick="chatChip('How much did I spend this week?')">How much did I spend?</div>
           <div class="chat-hint-chip" onclick="chatChip('Show my recent transactions')">Recent transactions</div>
+          <div class="chat-hint-chip" onclick="kukuaFraud('chat')">Report fraud</div>
         </div>
       </div>
     </div>
@@ -3454,8 +3681,8 @@ document.addEventListener('pointerdown',function(e){
       +"Rules: never give investment, legal, or tax advice; never reveal full account numbers; never claim a payment is completed (the app shows a secure confirmation + Face ID/PIN step for that). "
       +"CRITICAL: The ONLY phone number that exists for this app is the Fidelity Bank Ghana support line, 0800 00 3355. Whenever you refer someone to call, contact, or get help, you MUST give exactly 0800 00 3355. NEVER invent, guess, change, or output any other phone number under any circumstances. "
       +"Reply with ONLY a raw JSON object — no markdown, no backticks, no preamble — exactly: "
-      +'{"reply": string, "intent": "balance"|"spend"|"history"|"airtime"|"transfer"|"qr"|"rewards"|"help"|"chat"|"unknown", "amount": number|null, "payee": string|null}. '
-      +"Use 'transfer' when sending/paying someone (extract amount and payee name). Use 'airtime' for airtime/data top-ups (extract amount). Use 'chat' for general questions you answer directly inside 'reply'. "
+      +'{"reply": string, "intent": "balance"|"spend"|"history"|"airtime"|"transfer"|"qr"|"rewards"|"fraud"|"help"|"chat"|"unknown", "amount": number|null, "payee": string|null}. '
+      +"Use 'transfer' when sending/paying someone (extract amount and payee name). Use 'airtime' for airtime/data top-ups (extract amount). Use 'fraud' when the user wants to report fraud, a scam, suspicious activity, or asks about fraud awareness/training. Use 'chat' for general questions you answer directly inside 'reply'. "
       +"For 'transfer' and 'airtime', keep 'reply' to a short confirmation lead-in (e.g. 'Sending GH\u20b5 200 to Ama \u2014 confirm to authorise.'). Keep every reply under ~40 words.";
   }
   /* Hard safeguard: the support number is ALWAYS 0800 00 3355.
@@ -3488,6 +3715,7 @@ document.addEventListener('pointerdown',function(e){
     else if(/(send|transfer|pay|give)/.test(q)){ t='transfer'; var to=(q.match(/(?:to|for)\s+([a-z]+(?:\s+[a-z]+)?)/)||[])[1]; if(to) to=to.replace(/\b(cedis|ghs|the|my|him|her|them)\b/g,'').trim(); payee=to||null; }
     else if(/(scan|qr|receive|my code)/.test(q)) t='qr';
     else if(/(reward|spin|points|o.?spin)/.test(q)) t='rewards';
+    else if(/(fraud|scam|phish|smish|suspicious|unauthor|impersonat|stolen card|been hacked|report.*(fraud|incident))/.test(q)) t='fraud';
     else if(/(help|what can you|commands)/.test(q)) t='help';
     return {type:t, amount:num, payee:payee, reply:'', ai:false};
   }
@@ -3540,6 +3768,7 @@ document.addEventListener('pointerdown',function(e){
         if(intent.amount && !who){ reply=reply||('Who should receive GH\u20b5 '+intent.amount+'? Opening transfers.'); nav='transfers'; break; }
         reply=reply||'Let\u2019s set up your transfer. Opening transfers.'; nav='transfers'; break;
       }
+      case 'fraud': reply=reply||'Opening Fraud Support. You can report an incident to the Financial Crime Management Team, run a flash scenario, or check the latest fraud trends.'; nav='fraud'; break;
       case 'chat': reply=reply||'I\u2019m here to help with your banking. What would you like to do?'; break;
       default:     reply=reply||'Sorry, I didn\u2019t quite understand your request. For further assistance or any enquiries, please call 0800 00 3355.';
     }
@@ -3816,6 +4045,126 @@ window.addEventListener('load', function(){
       else if(window.showScreen) showScreen(q);
     }catch(e){}
   }, 300);
+});
+</script>
+<script>
+
+/* ═════════ KUKUA FRAUD BOT — Fraud Support ═════════ */
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function haptic(ms){ try{ if(navigator.vibrate) navigator.vibrate(ms||6);}catch(e){} }
+  var _fraudFrom='home';
+
+  window.openFraud=function(from){ _fraudFrom=from||'home'; showScreen('fraud'); };
+  window.fraudBack=function(){ showScreen(_fraudFrom==='chat'?'chat':(_fraudFrom==='voice'?'voice':'home')); };
+
+  function openSheet(id){ var o=$(id); if(!o) return; o.classList.add('show'); haptic(8); }
+  window.closeFraudSheet=function(id){ var o=$(id); if(o) o.classList.remove('show'); };
+  // tap-scrim to close
+  ['fraudReportOv','fraudQuizOv','fraudAwareOv'].forEach(function(id){
+    document.addEventListener('click',function(e){ var o=$(id); if(o&&e.target===o) o.classList.remove('show'); });
+  });
+
+  function toast(msg){
+    var t=$('fraudToast'), tx=$('fraudToastTxt'); if(!t) return;
+    if(tx) tx.textContent=msg; t.classList.add('show'); haptic(12);
+    clearTimeout(t._tm); t._tm=setTimeout(function(){ t.classList.remove('show'); },3600);
+  }
+
+  /* ---- Incident reporting ---- */
+  var _fraudType=null;
+  window.openFraudReport=function(){ _fraudType=null; var d=$('fraudDesc'); if(d) d.value='';
+    Array.prototype.forEach.call(document.querySelectorAll('#fraudTypes .fr-type'),function(el){el.classList.remove('sel');});
+    openSheet('fraudReportOv'); };
+  window.pickFraudType=function(el,t){ _fraudType=t;
+    Array.prototype.forEach.call(document.querySelectorAll('#fraudTypes .fr-type'),function(x){x.classList.remove('sel');});
+    el.classList.add('sel'); haptic(6); };
+  window.submitFraud=function(){
+    if(!_fraudType){ toast('Please pick a fraud type first.'); return; }
+    closeFraudSheet('fraudReportOv');
+    var l=$('loader'); if(l) l.classList.add('show'); haptic(12);
+    setTimeout(function(){
+      if(l) l.classList.remove('show');
+      var ref='FCM-'+Math.floor(100000+Math.random()*900000);
+      toast('Reported to the Financial Crime Management Team. Ref '+ref);
+    },1000);
+  };
+
+  /* ---- Flash scenarios (quiz) ---- */
+  var _scn=[
+    { q:'A caller says he accidentally sent GH\u20b5 500 to a customer\u2019s wallet and begs them to send it back quickly before \u201cthe bank reverses it\u201d. What\u2019s the safest action?',
+      opts:['Help the customer send it back to stop trouble','Tell the customer to verify with the mobile-money provider and not move any funds','Ask the customer for their PIN to check the wallet'],
+      correct:1,
+      fb:'Correct. This is the classic \u201cwrong send\u201d scam. No funds should move until the network confirms a genuine error \u2014 and never ask for a PIN.' },
+    { q:'A customer forwards an SMS \u201cfrom Fidelity\u201d with a link asking them to confirm their OTP to \u201cunlock\u201d their account. What do you advise?',
+      opts:['Confirm the OTP so the account isn\u2019t locked','Never share the OTP; Fidelity never asks for it \u2014 report and delete the message','Click the link to check if it\u2019s real'],
+      correct:1,
+      fb:'Correct. OTPs and PINs are never requested by Fidelity. Treat the link as phishing \u2014 report it to FCM and delete it.' }
+  ];
+  var _qi=0, _qScore=0, _qAnswered=false;
+  window.openFraudQuiz=function(){ _qi=0; _qScore=0; renderQ(); openSheet('fraudQuizOv'); };
+  function renderQ(){
+    _qAnswered=false;
+    var s=_scn[_qi];
+    $('fraudQProg').textContent='SCENARIO '+(_qi+1)+' OF '+_scn.length;
+    $('fraudQTitle').textContent='Flash Scenario';
+    $('fraudQScn').textContent=s.q;
+    var box=$('fraudQOpts'); box.innerHTML='';
+    s.opts.forEach(function(o,i){
+      var b=document.createElement('button'); b.className='fr-q-opt'; b.textContent=o;
+      b.onclick=function(){ answerQ(i,b); };
+      box.appendChild(b);
+    });
+    var fb=$('fraudQFb'); fb.classList.remove('show'); fb.textContent='';
+    $('fraudQNext').style.display='none';
+    $('fraudQNext').textContent = _qi<_scn.length-1 ? 'Next scenario' : 'See result';
+  }
+  function answerQ(i,btn){
+    if(_qAnswered) return; _qAnswered=true; haptic(10);
+    var s=_scn[_qi];
+    var opts=document.querySelectorAll('#fraudQOpts .fr-q-opt');
+    opts[s.correct].classList.add('correct');
+    if(i!==s.correct) btn.classList.add('wrong'); else _qScore++;
+    var fb=$('fraudQFb'); fb.innerHTML=(i===s.correct?'<b>Correct \u2705</b> ':'<b>Not quite. </b>')+s.fb;
+    fb.classList.add('show');
+    $('fraudQNext').style.display='block';
+  }
+  window.fraudQuizNext=function(){
+    if(_qi<_scn.length-1){ _qi++; renderQ(); return; }
+    // result
+    $('fraudQProg').textContent='RESULT';
+    $('fraudQTitle').textContent='You scored '+_qScore+' / '+_scn.length;
+    $('fraudQScn').textContent = _qScore===_scn.length
+      ? 'Sharp eye! You spotted every scam. Keep this awareness up \u2014 fraudsters change tactics often.'
+      : 'Good effort. Review the red flags in Staff Awareness, and remember: never share PIN/OTP, and never rush a money movement.';
+    $('fraudQOpts').innerHTML='';
+    $('fraudQFb').classList.remove('show');
+    var n=$('fraudQNext'); n.textContent='Done'; n.onclick=function(){ closeFraudSheet('fraudQuizOv'); n.onclick=fraudQuizNext; };
+  };
+
+  window.openFraudAware=function(){ openSheet('fraudAwareOv'); };
+  window.scrollFraudFeed=function(){
+    var sc=$('fraud'), l=$('fraudFeedLbl');
+    if(sc && l){
+      var top = l.getBoundingClientRect().top - sc.getBoundingClientRect().top + sc.scrollTop - 12;
+      sc.scrollTo({ top: Math.max(0, top), behavior:'smooth' });
+    }
+    haptic(6);
+  };
+
+  /* ---- entry chips from Kukua ---- */
+  window.kukuaFraud=function(origin){ _fraudFrom=origin||'chat'; showScreen('fraud'); };
+})();
+
+</script>
+<script>
+/* Keep the phone shell pinned: screens scroll internally, the shell never should.
+   Prevents the bottom nav from being pushed up by programmatic scrolls
+   (scrollIntoView, input/textarea focus, etc.). */
+window.addEventListener('load', function(){
+  var ph=document.querySelector('.phone');
+  if(!ph) return;
+  ph.addEventListener('scroll', function(){ if(ph.scrollTop||ph.scrollLeft){ ph.scrollTop=0; ph.scrollLeft=0; } }, {passive:true});
 });
 </script>
 </body></html>
